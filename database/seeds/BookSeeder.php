@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Book;
 
 class BookSeeder extends Seeder
 {
@@ -13,6 +14,7 @@ class BookSeeder extends Seeder
     {
         DB::table('book')->truncate();
         DB::table('book')->insert(['name' => '42','code'=>'2adf',
-			'enum'=>'1']);
+            'enum'=>'1']);
+            factory(Book::class,20)->create();
     }
 }
